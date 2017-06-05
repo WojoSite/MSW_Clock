@@ -11,14 +11,11 @@ function updateClock(){
   hr = (hr < 10 ? "0" : "") + hr;
   mn = (mn < 10 ? "0" : "") + mn;
   sc = (sc < 10 ? "0" : "") + sc;
-
   // console.log(hr, mn, sc);
 
   var hexColor = (hr + mn + sc);
-
   // console.log(hexColor);
 
   colorDisplay.style.backgroundColor = "#"+hexColor;
   clockDisplay.innerHTML = "#"+hexColor;
-
 }
