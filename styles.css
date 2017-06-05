@@ -1,0 +1,53 @@
+body{
+  margin: 0;
+}
+
+/* ===== CONTAINER ===== */
+#container{
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  justify-content: center;
+}
+
+#clock-holder{
+  position: relative;
+  box-sizing: border-box;
+  top: 10%;
+  height: 250px;
+  width: 350px;
+  background: white;
+  box-shadow: 0 2px 4px px rgba(0, 0, 0, 0.3);
+  border: 1px solid black;
+  border-radius: 2px;
+  text-align: center;
+}
+
+#clock-header{
+  margin: 20px;
+}
+
+.clock-display{
+  display: inline-block;
+  margin: 0 5px;
+  padding: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+  font-size: 20px;
+}
+
+#color-display{
+  display: inline-block;
+  margin: 20px;
+  height: 50px;
+  width: 250px;
+  border: 1px solid black;
+}
+
+.digit-separate{
+  font-size: 30px;
+}
