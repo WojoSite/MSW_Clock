@@ -16,18 +16,30 @@ function updateClock(){
   var mn = time.getMinutes();
   var sc = time.getSeconds();
 
+  // get corresponsing base-16 hex values
+  var hrh = hr.toString(16);
+  var mnh = mn.toString(16);
+  var sch = sc.toString(16);
+
+  // add a zero before single-digit hex value
+  hrh = (hrh.length == 1 ? "0" : "") + hrh;
+  mnh = (mnh.length == 1 ? "0" : "") + mnh;
+  sch = (sch.length == 1 ? "0" : "") + sch;
+
+  var hexDisplay = (hrh + mnh + sch);
+
   // add a zero before numbers that are a single digit
   hr = (hr < 10 ? "0" : "") + hr;
   mn = (mn < 10 ? "0" : "") + mn;
   sc = (sc < 10 ? "0" : "") + sc;
-  // console.log(hr, mn, sc);
 
-  var hexColor = (hr + mn + sc);
-  // console.log(hexColor);
+  var timeDisplay = (hr + ":" + mn + ":"+ sc);
+
+  // display time value in decimals
+  clockDisplay.innerHTML = "#"+timeDisplay;
 
   // adjust bg color to time-hex match
-  colorDisplay.style.backgroundColor = "#"+hexColor;
+  colorDisplay.style.backgroundColor = "#"+hexDisplay;
 
-  // display hex value
-  clockDisplay.innerHTML = "#"+hexColor;
+  console.log(hexDisplay);
 }
