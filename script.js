@@ -14,7 +14,7 @@ function updateClock(){
 
   // console.log(hr, mn, sc);
 
-  var hexColor = (hr + mn + sc).toString();
+  var hexColor = (hr + mn + sc);
 
   // console.log(hexColor);
 
