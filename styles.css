@@ -13,6 +13,7 @@ body{
   justify-content: center;
 }
 
+/* ===== CLOCK HOLDER ===== */
 #clock-holder{
   position: relative;
   box-sizing: border-box;
